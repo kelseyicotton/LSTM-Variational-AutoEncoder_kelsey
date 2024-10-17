@@ -21,6 +21,27 @@
 
 This is a  [PyTorch Implementation of Generating Sentences from a Continuous Space by Bowman et al. 2015.](https://arxiv.org/abs/1511.06349) where LSTM based VAE is trained on Penn Tree Bank dataset. 
 
+### Kelsey ToDo List
+- [ ] The original LSTM-VAE code is for sentence/text data
+  - [ ] We need to write a Dataset Class for loading audio data, similar to the PTB class in use here
+    - [ ] audio_dataset.py
+    - [ ] Look at ktatar/rawaudiovae class
+      - [ ] Feature extraction
+        - [ ] spectrograms vs mfcc
+      - [ ] Normalization
+  - [ ] We need to adjust the model's input so it can accept the input shape of our audio data
+    - [ ] model.py
+    - [ ] Input layer of the model needs to be able to handle our spectrogram features
+  - [ ] We then need to update the training and inference logic to be able to handle audio data
+    - [ ] training logic-> loading logic main.py
+    - [ ] Modifying how to generate samples from the model
+      - [ ] utils.py/def interpolate
+  - [ ] We should also consider whether the loss function used here is appropriate for audio data
+    - [ ] This repo uses ~VAE Loss = Reconstruction Loss + KL Divergence Loss
+  - [ ] We need to consider the hyperparameters (lr, batch size, and the architecture itself) to be suitable for our audio data
+  - [ ] TensorBoard loggin
+  - [ ] 
+
 ### Kelsey Version of Setup 🪄
 - [ ] Clone repository:
   - [ ] git clone https://github.com/kelseyicotton/LSTM-Variational-AutoEncoder_kelsey.git
@@ -35,6 +56,7 @@ This is a  [PyTorch Implementation of Generating Sentences from a Continuous Spa
   - [ ] pip install nltk
   - [ ] conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
   - [ ] pip install matplotlib
+  - [ ] pip install tensorboard
   
 ### Setup
 
