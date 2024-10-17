@@ -21,6 +21,21 @@
 
 This is a  [PyTorch Implementation of Generating Sentences from a Continuous Space by Bowman et al. 2015.](https://arxiv.org/abs/1511.06349) where LSTM based VAE is trained on Penn Tree Bank dataset. 
 
+### Kelsey Version of Setup 🪄
+- [ ] Clone repository:
+  - [ ] git clone https://github.com/kelseyicotton/LSTM-Variational-AutoEncoder_kelsey.git
+- [ ] Then, inside this directory:
+  - [ ] git clone https://github.com/Khamies/Sequence-VAE.git
+- [ ] Now, create a conda environment:
+  - [ ] conda create --name NAME_GOES_HERE python==3.8
+- [ ] Activate conda environment you just made:
+  - [ ] conda activate NAME_GOES_HERE
+- [ ] Now some more installing:
+  - [ ] pip install numpy 
+  - [ ] pip install nltk
+  - [ ] conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
+  - [ ] pip install matplotlib
+  
 ### Setup
 
 The code is using `pipenv` as a virtual environment and package manager. To run the code, all you need is to install the necessary dependencies. open the terminal and type:
